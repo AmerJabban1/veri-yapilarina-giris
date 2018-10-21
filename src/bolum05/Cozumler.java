@@ -16,4 +16,20 @@ public class Cozumler {
         } else
             return 0;
     }
+    
+    // 6. Verilen bir ikili arama agacindaki tek dugum sayisini hesaplayan fonksiyonu
+    // yaziniz. Bir dugumun degeri tek sayiysa o dugume tek dugum denir.
+    static int tekDugum(Node root) {
+        if (root != null) {
+            if (isOdd(root.data)) {
+                return 1 + tekDugum(root.left) + tekDugum(root.right);
+            } else
+                return 0 + tekDugum(root.left) + tekDugum(root.right);
+        } else
+            return 0;
+    }
+    
+    private static boolean isOdd(int n) {
+        return n % 2 == 1;
+    }
 }
