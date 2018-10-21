@@ -1,5 +1,9 @@
 package bolum05;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class Cozumler {
     
     // 4. Verilen bir ikili arama agacindaki sayilari buyukten kucuge ekrana yazan
@@ -27,6 +31,37 @@ public class Cozumler {
                 return 0 + tekDugum(root.left) + tekDugum(root.right);
         } else
             return 0;
+    }
+    
+    // 7. Verilen bir ikili arama agacindaki yapraklardan rastgele bir tanesini dondu-
+    // ren bir fonksiyonu yaziniz.
+    static Node rasgeleYaprak(Node root) {
+        if (root != null) {
+            ArrayList<Integer> list = new ArrayList<>();
+            getPostOrder(list, root);
+            
+            Node[] array = new Node[list.size()];
+            for (int i = 0; i < array.length; i++) {
+                array[i] = new Node(list.get(i));
+            }
+            
+            Random random = new Random();
+            int r = random.nextInt(array.length);
+            return array[r];
+        }
+        return null;
+    }
+    
+    static int size(Node root) {
+        return root != null ? (1 + size(root.left) + size(root.right)) : 0;
+    }
+    
+    static void getPostOrder(List<Integer> list, Node root) {
+        if (root != null) {
+            list.add(root.data);
+            getPostOrder(list, root.left);
+            getPostOrder(list, root.right);
+        }
     }
     
     private static boolean isOdd(int n) {
