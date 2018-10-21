@@ -56,8 +56,11 @@ public class Cozumler {
     // larin sayisini donduren fonksiyonu yaziniz
     static int kucukX(Node root, int x) {
         if (root != null) {
-            if (root.data < x) return 1 + kucukX(root.left, x) + kucukX(root.right, x);
-            else return 0 + kucukX(root.left, x) + kucukX(root.right, x);
+            if (root.data < x) {
+                return 1 + kucukX(root.left, x) + kucukX(root.right, x);
+            } else {
+                return 0 + kucukX(root.left, x) + kucukX(root.right, x);
+            }
         }
         return 0;
     }
