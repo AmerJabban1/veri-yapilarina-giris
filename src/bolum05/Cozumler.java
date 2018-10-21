@@ -28,7 +28,7 @@ public class Cozumler {
             if (isOdd(root.data)) {
                 return 1 + tekDugum(root.left) + tekDugum(root.right);
             } else
-                return 0 + tekDugum(root.left) + tekDugum(root.right);
+                return tekDugum(root.left) + tekDugum(root.right);
         }
         return 0;
     }
@@ -59,7 +59,7 @@ public class Cozumler {
             if (root.data < x) {
                 return 1 + kucukX(root.left, x) + kucukX(root.right, x);
             } else {
-                return 0 + kucukX(root.left, x) + kucukX(root.right, x);
+                return kucukX(root.left, x) + kucukX(root.right, x);
             }
         }
         return 0;
