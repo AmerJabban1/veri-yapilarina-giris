@@ -65,6 +65,24 @@ public class Cozumler {
         return 0;
     }
     
+    // 9. Verilen bir ikili arama agacindaki tum yapraklari silen fonksiyonu yaziniz.    
+    static void yapraklariSil(Node root) {
+        if (root.left != null) {
+            if (root.left.isLeaf()) {
+                root.left = null;
+            } else {
+                yapraklariSil(root.left);
+            }
+        }
+        if (root.right != null) {
+            if (root.right.isLeaf()) {
+                root.right = null;
+            } else {
+                yapraklariSil(root.right);
+            }
+        }
+    }
+    
     static int size(Node root) {
         return root != null ? (1 + size(root.left) + size(root.right)) : 0;
     }
