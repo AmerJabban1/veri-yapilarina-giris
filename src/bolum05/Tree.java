@@ -31,22 +31,25 @@ public class Tree {
         Node a = root;
         Node b = null;
         
-        while (data != a.data) {
+        while (a.data != data) {
             if (data < a.data) {
-                b = a;
                 a = a.left;
             } else {
-                b = a;
                 a = a.right;
             }
         }
-        
         while (true) {
-            if (a.left == null && a.right == null) {
-                a = b;
-                b = null;
+            if (a.left != null) {
+                b = a.left.getMaxIterative();
+            }
+            if (b == null && a.right != null) {
+                b = a.right.getMinIterative();
+            }
+            if (b == null) {
                 break;
             }
+            a.data = b.data;
+            a = b;
         }
     }
     
