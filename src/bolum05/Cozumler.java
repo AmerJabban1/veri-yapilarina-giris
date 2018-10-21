@@ -17,8 +17,8 @@ public class Cozumler {
     static int doluDugumSayisi(Node root) {
         if (root.left != null && root.right != null) {
             return 1 + doluDugumSayisi(root.left) + doluDugumSayisi(root.right);
-        } else
-            return 0;
+        }
+        return 0;
     }
     
     // 6. Verilen bir ikili arama agacindaki tek dugum sayisini hesaplayan fonksiyonu
@@ -29,8 +29,8 @@ public class Cozumler {
                 return 1 + tekDugum(root.left) + tekDugum(root.right);
             } else
                 return 0 + tekDugum(root.left) + tekDugum(root.right);
-        } else
-            return 0;
+        }
+        return 0;
     }
     
     // 7. Verilen bir ikili arama agacindaki yapraklardan rastgele bir tanesini dondu-
@@ -50,6 +50,16 @@ public class Cozumler {
             return array[r];
         }
         return null;
+    }
+    
+    // 8. Verilen bir ikili arama agacindaki dugumlerden, degeri X'ten kucuk olan-
+    // larin sayisini donduren fonksiyonu yaziniz
+    static int kucukX(Node root, int x) {
+        if (root != null) {
+            if (root.data < x) return 1 + kucukX(root.left, x) + kucukX(root.right, x);
+            else return 0 + kucukX(root.left, x) + kucukX(root.right, x);
+        }
+        return 0;
     }
     
     static int size(Node root) {
