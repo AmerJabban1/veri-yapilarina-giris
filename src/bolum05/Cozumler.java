@@ -56,7 +56,7 @@ public class Cozumler {
         return root != null ? (1 + size(root.left) + size(root.right)) : 0;
     }
     
-    static void getPostOrder(List<Integer> list, Node root) {
+    private static void getPostOrder(List<Integer> list, Node root) {
         if (root != null) {
             list.add(root.data);
             getPostOrder(list, root.left);
