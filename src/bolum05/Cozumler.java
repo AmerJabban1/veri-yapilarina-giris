@@ -10,13 +10,10 @@ public class Cozumler {
     
     // 5. Verilen bir ikili arama agacindaki dolu dugum sayisini hesaplayan fonksiyonu
     // yaziniz. Bir dugumun hem sol hem sag cocugu varsa o dugume dolu dugum denir
-    static int doluDugumSayisi(Tree tree) {
-        int n = 0;
-        Node temp = tree.root;
-        if (temp.left != null && temp.right != null) {
-            n++;
-            
-        }
-        return n;
+    static int doluDugumSayisi(Node root) {
+        if (root.left != null && root.right != null) {
+            return 1 + doluDugumSayisi(root.left) + doluDugumSayisi(root.right);
+        } else
+            return 0;
     }
 }
