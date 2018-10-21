@@ -80,26 +80,5 @@ public class Node {
     }
     
     public static void main(String[] args) {
-        Tree tree = new Tree();
-
-        tree.add(12);
-        tree.add(5);
-        tree.add(18);
-        tree.add(2);
-        tree.add(9);
-        tree.add(15);
-        tree.add(19);
-        tree.add(13);
-        tree.add(17);
-        
-        /*
-         * 
-         *    (5)
-         *    / \
-         *  (3) (7) 
-         *  
-         */
-        
-        System.out.println(Cozumler.doluDugumSayisi(tree.root));
     }
 }
