@@ -154,6 +154,15 @@ public class Cozumler {
         }
     }
     
+    // 15. Verilen bir ikili arama agacindaki tum dugumlerin toplam derinligini
+    // hesaplayan fonksiyonu yaziniz.
+    static int toplamDerinlik(Node root) {
+        if (root != null) {
+            return 1 + toplamDerinlik(root.left) + toplamDerinlik(root.right);
+        }
+        return 0;
+    }
+    
     static int size(Node root) {
         return root != null ? (1 + size(root.left) + size(root.right)) : 0;
     }
