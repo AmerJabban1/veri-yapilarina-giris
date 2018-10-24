@@ -98,7 +98,7 @@ public class Cozumler {
                 if (root.data > root.right.data) {
                     return false;
                 } else {
-                    kosulTamam(root.right);
+                    return kosulTamam(root.right);
                 }
             }
             return true;
