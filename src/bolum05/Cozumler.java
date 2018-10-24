@@ -83,8 +83,21 @@ public class Cozumler {
         }
     }
     
-    // 10. Verilen bir agacin ikili arama agaci kosullarini saglayip saglamadigini bulan
+    // 10. Verilen bir ikili arama agacindaki tum sayilarin toplamini bulan
     // fonksiyonu yaziniz.
+    static int agacTopla(Node root) {
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        getPostOrder(arrayList, root);
+        
+        int sum = 0;
+        for (int n : arrayList) {
+            sum += n;
+        }
+        return sum;
+    }
+    
+    // 11. Verilen bir agacin ikili arama agaci kosullarini saglayip saglama-
+    // digini bulan fonksiyonu yaziniz.
     static boolean kosulTamam(Node root) {
         if (root != null) {
             if (root.left != null) {
@@ -105,6 +118,8 @@ public class Cozumler {
         }
         return false;
     }
+    
+    // 11. Verilen bir
     
     static int size(Node root) {
         return root != null ? (1 + size(root.left) + size(root.right)) : 0;
