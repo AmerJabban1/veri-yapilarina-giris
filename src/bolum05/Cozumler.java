@@ -141,6 +141,19 @@ public class Cozumler {
         return 0;
     }
     
+    // 14. Verilen bir ikili arama agacindaki sayilar icerisinde k1 ile k2 arasinda
+    // olanlari ekrana yazan fonksiyonu yaziniz.
+    static void aralikYaz(Node root, int k1, int k2) {
+        if (root != null) {
+            if (root.left != null)
+                aralikYaz(root.left, k1, k2);
+            if (root.data > k1 && root.data < k2)
+                System.out.print(root.data + " ");
+            if (root.right != null)
+                aralikYaz(root.right, k1, k2);
+        }
+    }
+    
     static int size(Node root) {
         return root != null ? (1 + size(root.left) + size(root.right)) : 0;
     }
