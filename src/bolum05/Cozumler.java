@@ -119,7 +119,17 @@ public class Cozumler {
         return false;
     }
     
-    // 11. Verilen bir
+    // 12. Verilen bir ikili arama agacinin tum dugumlerinin sol ve sag cocuklarinin
+    // yerlerini degistiren fonksiyonu yaziniz.
+    static void yerDegistir(Node root) {
+        if (root.left != null && root.right != null) {
+            Node temp = root.left;
+            root.left = root.right;
+            root.right = temp;
+            yerDegistir(root.left);
+            yerDegistir(root.right);
+        }
+    }
     
     static int size(Node root) {
         return root != null ? (1 + size(root.left) + size(root.right)) : 0;
