@@ -90,11 +90,15 @@ public class Cozumler {
             if (root.left != null) {
                 if (root.data < root.left.data) {
                     return false;
+                } else {
+                    return kosulTamam(root.left);
                 }
             }
             if (root.right != null) {
                 if (root.data > root.right.data) {
                     return false;
+                } else {
+                    kosulTamam(root.right);
                 }
             }
             return true;
