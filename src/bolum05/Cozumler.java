@@ -83,6 +83,25 @@ public class Cozumler {
         }
     }
     
+    // 10. Verilen bir agacin ikili arama agaci kosullarini saglayip saglamadigini bulan
+    // fonksiyonu yaziniz.
+    static boolean kosulTamam(Node root) {
+        if (root != null) {
+            if (root.left != null) {
+                if (root.data < root.left.data) {
+                    return false;
+                }
+            }
+            if (root.right != null) {
+                if (root.data > root.right.data) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+    
     static int size(Node root) {
         return root != null ? (1 + size(root.left) + size(root.right)) : 0;
     }
