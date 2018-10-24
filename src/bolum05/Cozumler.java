@@ -131,6 +131,16 @@ public class Cozumler {
         }
     }
     
+    // 13. Verilen bir ikili arama agacinin derinligini hesaplayan fonksiyonu yaziniz.
+    static int derinlik(Node root) {
+        if (root != null) {
+            if (root.left != null || root.right != null) {
+                return 1 + Math.max(derinlik(root.left), derinlik(root.right));
+            }
+        }
+        return 0;
+    }
+    
     static int size(Node root) {
         return root != null ? (1 + size(root.left) + size(root.right)) : 0;
     }
