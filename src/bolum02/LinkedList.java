@@ -1,22 +1,9 @@
 package bolum02;
 
-class Node {
-    int data;
-    Node next, prev;
-    
-    Node(int data) {
-        this.data = data;
-    }
-    
-    public String toString() {
-        return String.valueOf(data);
-    }
-}
-
 public class LinkedList {
     Node head, tail;
     
-    void append(int data) {
+    public void append(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -36,7 +23,7 @@ public class LinkedList {
         head = newNode;
     }
     
-    void remove(int value) {
+    public void remove(int value) {
         if (head != null && contains(this, value)) {
             Node prev = null;
             Node temp = head;
@@ -61,6 +48,15 @@ public class LinkedList {
         System.out.println();
     }
     
+    public Node search(int value) {
+        Node temp = head;
+        while (temp != null) {
+            if (temp.data == value)
+                return temp;
+        }
+        return null;
+    }
+    
     private boolean contains(LinkedList list, int n) {
         Node temp = list.head;
         while (temp != null) {
@@ -72,7 +68,13 @@ public class LinkedList {
         return false;
     }
     
-    public static void main(String[] args) {
-        
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        Node temp = head;
+        while (temp != null) {
+            sb.append(temp.data + " ");
+            temp = temp.next;
+        }
+        return sb.toString();
     }
 }
