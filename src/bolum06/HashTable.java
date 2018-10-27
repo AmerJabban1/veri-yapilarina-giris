@@ -1,58 +1,59 @@
 package bolum06;
 
-import bolum02.LinkedList;
-import bolum02.Node;
+import java.util.Random;
 
-public class HashTable {
-    LinkedList[] table;
-    boolean[] deleted;
-    int N;
+public class Hashtable {    
+    private Integer[] table;
+    private int capacity;
+    private int size;
     
-    public HashTable(int N) {
-        table = new LinkedList[N];
-        deleted = new boolean[N];
-        for (int i = 0; i < N; i++) {
-            table[i] = new LinkedList();
-        }
-        this.N = N;
+    public Hashtable(int capacity) {
+        table = new Integer[capacity];
+        this.capacity = capacity;
+        this.size = 0;
     }
     
     int hash(int number) {
-        return number % N;
+        return number % capacity;
     }
     
-    Node search(int value) {
-        int address = hash(value);
-        return table[address].search(value);
-    }
-    
-    void add(int value) {
-        int address = hash(value);
-        table[address].append(value);
-    }
-    
-    void remove(int value) {
-        int address = hash(value);
-        Node node = table[address].search(value);
-        if (node != null) {
-            table[address].remove(value);
+    boolean add(int number) {
+        if (table[hash(number)] != null) {
+            System.out.printf(">> Hata: [%d] sayisinin eklenmeye calisildigi [%d] indisi dolu!\n", number, hash(number));
+            return false;
         }
+        table[hash(number)] = new Integer(number);
+        size++;
+        return true;
+    }
+    
+    void remove(int number) {
+        if (table[hash(number)] != null) {
+            table[hash(number)] = null;
+            size--;
+        }
+    }
+    
+    public float loadFactor() {
+        return (float)size / capacity;
     }
     
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < N; i++) {
-            sb.append(table[i] + " ");
+        for (Integer integer : table) {
+            if (integer != null)
+                sb.append(integer).append(" ");
         }
-        sb.append("\n");
         return sb.toString();
     }
     
     public static void main(String[] args) {
-        HashTable ht = new HashTable(10);
-        for (int i = 1; i <= 10; i++) {
-            ht.add(i);
+        Random random = new Random();
+        Hashtable ht = new Hashtable(10);
+        for (int i = 0; i < 7; i++) {
+            ht.add(random.nextInt(100));
         }
         System.out.println(ht);
+        System.out.println(ht.loadFactor());
     }
 }
