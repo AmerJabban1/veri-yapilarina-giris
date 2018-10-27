@@ -4,7 +4,6 @@ Olcay Taner Yıldız'ın "C &amp;&amp; Java ile Veri Yapılarına Giriş" kitab�
 * Linked List
 * Stack
 * Queue
-* Tree
-* BST
+* Binary Search Tree
 
 bölümlerini içerir.
