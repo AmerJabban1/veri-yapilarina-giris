@@ -57,6 +57,10 @@ public class LinkedList {
         return null;
     }
     
+    public boolean contains(int n) {
+        return contains(this, n);
+    }
+    
     private boolean contains(LinkedList list, int n) {
         Node temp = list.head;
         while (temp != null) {
@@ -72,9 +76,10 @@ public class LinkedList {
         StringBuilder sb = new StringBuilder();
         Node temp = head;
         while (temp != null) {
-            sb.append(temp.data + " ");
+            sb.append(temp.data).append(" ");
             temp = temp.next;
         }
+        sb.append("\n");
         return sb.toString();
     }
 }
