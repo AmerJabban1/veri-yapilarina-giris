@@ -5,5 +5,6 @@ Olcay Taner Yıldız'ın "C &amp;&amp; Java ile Veri Yapılarına Giriş" kitab�
 * Stack
 * Queue
 * Binary Search Tree
+* Hash Table
 
 bölümlerini içerir.
