@@ -2,10 +2,14 @@ package bolum02;
 
 public class Node {
     int data;
-    Node next, prev;
+    public Node next, prev;
     
     public Node(int data) {
         this.data = data;
+    }
+    
+    public int getData() {
+        return data;
     }
     
     public String toString() {

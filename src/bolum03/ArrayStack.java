@@ -27,12 +27,19 @@ public class ArrayStack {
 		array[++top] = data;
 	}
 	
-	Integer pop() {
+	public Integer pop() {
 		if (!isEmpty()) {
 			return array[top--];
 		}
 		return null;
 	}
+	
+	public Integer peek() {
+        if (!isEmpty()) {
+            return array[top];
+        }
+        return null;
+    }
 	
 	void swap() {
 		if (array.length >= 2) {
@@ -49,6 +56,10 @@ public class ArrayStack {
 	
 	boolean isEmpty() {
 		return top == -1;
+	}
+	
+	public int size() {
+	    return top + 1;
 	}
 	
 	public String toString() {

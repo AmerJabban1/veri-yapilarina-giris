@@ -1,7 +1,7 @@
 package bolum02;
 
 public class LinkedList {
-    Node head, tail;
+    public Node head, tail;
     
     public void append(int data) {
         Node newNode = new Node(data);
@@ -70,6 +70,16 @@ public class LinkedList {
             temp = temp.next;
         }
         return false;
+    }
+    
+    public int size() {
+        Node temp = head;
+        int size = 0;
+        while (temp != null) {
+            size++;
+            temp = temp.next;
+        }
+        return size;
     }
     
     public String toString() {
