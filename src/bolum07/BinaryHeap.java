@@ -20,6 +20,10 @@ public class BinaryHeap {
         size = 0;
     }
     
+    private boolean isEmpty() {
+        return size == 0;
+    }
+    
     private boolean isFull() {
         return size == capacity;
     }
@@ -85,11 +89,14 @@ public class BinaryHeap {
         heapifyUp();
     }
     
-    public int extract() {
-        int item = items[0];
-        items[0] = items[size - 1];
-        heapifyDown(0);
-        size--;
-        return item;
+    public Integer extract() {
+        if (!isEmpty()) {
+            int item = items[0];
+            items[0] = items[size - 1];
+            heapifyDown(0);
+            size--;
+            return item;
+        }
+        return null;
     }
 }
