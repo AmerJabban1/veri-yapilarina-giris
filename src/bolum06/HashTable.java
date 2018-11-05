@@ -1,7 +1,5 @@
 package bolum06;
 
-import java.util.Random;
-
 public class Hashtable {    
     private Integer[] table;
     private int capacity;
@@ -45,15 +43,5 @@ public class Hashtable {
                 sb.append(integer).append(" ");
         }
         return sb.toString();
-    }
-    
-    public static void main(String[] args) {
-        Random random = new Random();
-        Hashtable ht = new Hashtable(10);
-        for (int i = 0; i < 7; i++) {
-            ht.add(random.nextInt(100));
-        }
-        System.out.println(ht);
-        System.out.println(ht.loadFactor());
     }
 }

@@ -1,7 +1,5 @@
 package bolum06;
 
-import java.util.Random;
-
 import bolum02.LinkedList;
 
 public class LinkedHashtable {
@@ -48,23 +46,5 @@ public class LinkedHashtable {
             sb.append(list).append("\n");
         }
         return sb.toString();
-    }
-    
-    public static void main(String[] args) {
-        Random random = new Random();
-        LinkedHashtable lht = new LinkedHashtable(10);
-        for (int i = 0; i < 10; i++) {
-            lht.add(random.nextInt(100));
-        }
-        for (int i = 0; i < 10; i++) {
-            lht.add(random.nextInt(100));
-        }
-        for (int i = 0; i < 10; i++) {
-            lht.add(random.nextInt(100));
-        }
-        for (int i = 0; i < 10; i++) {
-            lht.add(random.nextInt(100));
-        }
-        System.out.print(lht);
     }
 }
