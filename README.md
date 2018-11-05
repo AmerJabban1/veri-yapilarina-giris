@@ -6,8 +6,8 @@ Olcay Taner Yıldız'ın "C && Java ile Veri Yapılarına Giriş" kitabındaki a
 * Queue
 * Binary Search Tree
 * Hash Table
-* Binary Heap
+* Binary Heap*
 
 bölümlerini içerir. 
 
-###### Bazı bölümler sadece implementasyon içerir.
+###### Bazı bölümler(*) sadece implementasyon içerir.
