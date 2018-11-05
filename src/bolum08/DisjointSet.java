@@ -10,7 +10,16 @@ public class DisjointSet {
             this.data = data;
             parent = data;
             depth = 1;
-        }   
+        }
+
+        public int getData() {
+            return data;
+        }
+        
+        public int getParent() {
+            return parent;
+        }
+
     }
     
     private Element[] elements;
@@ -40,5 +49,9 @@ public class DisjointSet {
                 elements[set1].depth++;
             }
         }
+    }
+    
+    public Element[] getElements() {
+        return elements;
     }
 }
