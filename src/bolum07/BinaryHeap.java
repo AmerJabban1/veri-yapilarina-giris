@@ -57,13 +57,13 @@ public class BinaryHeap {
         }
     }
 
+    private int getRightChildIndex(int index) {
+        return (2 * index) + 2;
+    }
+
     private int getLeftChildIndex(int index) {
         return (2 * index) + 1;
     }
-    
-    private int getRightChildIndex(int index) {
-        return (2 * index) + 2;
-    }   
     
     private void heapifyUp() {
         int index = size - 1;
@@ -98,15 +98,5 @@ public class BinaryHeap {
             return item;
         }
         return null;
-    }
-    
-    public Integer get(int i) {
-        if ((size - 1) >= i)
-            return items[i];
-        return null;
-    }
-    
-    public int size() {
-        return size;
     }
 }
