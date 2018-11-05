@@ -1,5 +1,5 @@
-# Veri Yap�larına Giriş
-Olcay Taner Yıldız'ın "C &amp;&amp; Java ile Veri Yapılarına Giriş" kitabındaki alıştırmalara çözümlerim.
+# Veri Yapılarına Giriş
+Olcay Taner Yıldız'ın "C && Java ile Veri Yapılarına Giriş" kitabındaki alıştırmalara çözümlerim.
 
 * Linked List
 * Stack
@@ -8,6 +8,6 @@ Olcay Taner Yıldız'ın "C &amp;&amp; Java ile Veri Yapılarına Giriş" kitab�
 * Hash Table
 * Binary Heap
 
-bölümlerini içerir.
+bölümlerini içerir
 
 _Tamamlanmamıştır._
