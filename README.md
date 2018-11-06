@@ -11,4 +11,4 @@ Olcay Taner Yıldız'ın "C && Java ile Veri Yapılarına Giriş" kitabındaki a
 
 bölümlerini içerir. 
 
-###### Bazı bölümler(*) sadece implementasyon içerir.
+###### İşaretli(*) bölümler sadece implementasyon içerir.
