@@ -1,5 +1,7 @@
 package bolum03;
 
+import java.util.Arrays;
+
 public class ArrayStack {
 	int[] array;
 	int top;
@@ -13,16 +15,8 @@ public class ArrayStack {
 	
 	void push(int data) {
 		if (isFull()) {
-			int[] temp = new int[n];
-			for (int i = 0; i < temp.length; i++) {
-				temp[i] = array[i];
-			}
-			
+			array = Arrays.copyOf(array, n * 2);
 			n *= 2;
-			array = new int[n];
-			for (int i = 0; i < temp.length; i++) {
-				array[i] = temp[i];
-			}			
 		}
 		array[++top] = data;
 	}
