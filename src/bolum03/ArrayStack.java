@@ -7,13 +7,13 @@ public class ArrayStack {
 	int top;
 	int n;
 	
-	ArrayStack(int n) {
+	public ArrayStack(int n) {
 		array = new int[n];
 		top = -1;
 		this.n = n;
 	}
 	
-	void push(int data) {
+	public void push(int data) {
 		if (isFull()) {
 			array = Arrays.copyOf(array, n * 2);
 			n *= 2;
