@@ -3,9 +3,9 @@ package bolum03;
 import java.util.Arrays;
 
 public class ArrayStack {
-	int[] array;
-	int top;
-	int n;
+	private int[] array;
+	private int top;
+	private int n;
 	
 	public ArrayStack(int n) {
 		array = new int[n];
