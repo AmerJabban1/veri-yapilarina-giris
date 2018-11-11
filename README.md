@@ -8,6 +8,7 @@ Olcay Taner Yıldız'ın "C && Java ile Veri Yapılarına Giriş" kitabındaki a
 * Hash Table*
 * Binary Heap*
 * Disjoint-set*
+* Graph/Depth-First-Search*
 
 bölümlerini içerir. 
 
