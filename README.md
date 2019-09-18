@@ -13,4 +13,4 @@ Olcay Taner Yıldız'ın "C && Java ile Veri Yapılarına Giriş" kitabındaki a
 bölümlerini içerir. 
 
 ###### İşaretli(*) bölümler sadece implementasyon içerir.
-###### Paylaşılan kaynak kodlar zaman ve bellek karmaşıklığı konusunda verimli olmayabilir. Öncelikle soruyu çözebilmek amaçlanmıştır. Daha sonra düzeltilmemiştir.
+###### Paylaşılan kaynak kodlar zaman ve bellek karmaşıklığı açısından verimli olmayabilir. Öncelikle soruyu çözebilmek amaçlanmıştır. Daha sonra düzeltilmemiştir.
